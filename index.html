@@ -46,7 +46,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 60px;
-            background: rgba(247,245,240,0.92);
+            background: rgba(247,245,240,0.94);
             backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--border);
         }
@@ -70,7 +70,6 @@
                 font-weight: 500;
                 color: var(--ink-muted);
                 text-decoration: none;
-                letter-spacing: 0.02em;
                 transition: color 0.2s;
             }
 
@@ -169,12 +168,6 @@
                 border-color: var(--accent);
                 color: var(--accent);
             }
-
-        .hero-right {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
 
         .hero-stat-grid {
             display: grid;
@@ -385,7 +378,6 @@
                     position: absolute;
                     left: 0;
                     color: var(--accent);
-                    font-size: 0.75rem;
                 }
 
         /* SKILLS */
@@ -504,7 +496,7 @@
             justify-content: center;
         }
 
-        .project-type {
+        .proj-type {
             font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.1em;
@@ -513,7 +505,7 @@
             margin-bottom: 10px;
         }
 
-        .project-title-lg {
+        .proj-title-lg {
             font-family: 'DM Serif Display', serif;
             font-size: 1.7rem;
             color: var(--ink);
@@ -521,38 +513,44 @@
             line-height: 1.2;
         }
 
-        .project-title-md {
+        .proj-title-md {
             font-family: 'DM Serif Display', serif;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--ink);
             margin-bottom: 8px;
             line-height: 1.25;
         }
 
-        .project-desc {
+        .proj-desc {
             font-size: 0.88rem;
             color: var(--ink-muted);
             line-height: 1.75;
             margin-bottom: 18px;
         }
 
-        .project-tags {
+        .proj-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
 
-        .grid-2x2 {
+        .g2x2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
 
-        .grid-4 {
+        .g4 {
             display: grid;
             grid-template-columns: repeat(4,1fr);
             gap: 14px;
             margin-top: 14px;
+        }
+
+        .g3 {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 24px;
         }
 
         .thumb {
@@ -591,12 +589,6 @@
         }
 
         /* WEBSITES */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 24px;
-        }
-
         .web-card {
             border: 1px solid var(--border);
             border-radius: 6px;
@@ -618,10 +610,10 @@
 
             .web-thumb img {
                 width: 100%;
-                display: block;
+                height: 100%;
                 object-fit: cover;
                 object-position: top;
-                height: 100%;
+                display: block;
                 transition: transform 0.5s;
             }
 
@@ -651,8 +643,8 @@
             justify-content: center;
             aspect-ratio: 4/3;
             cursor: pointer;
-            transition: border-color 0.2s, transform 0.2s;
             overflow: hidden;
+            transition: border-color 0.2s, transform 0.2s;
         }
 
             .logo-card:hover {
@@ -670,10 +662,6 @@
                 background: #3b3ca6;
             }
 
-            .logo-card.bg-black {
-                background: #1a1a18;
-            }
-
         .brand-desc-grid {
             display: grid;
             grid-template-columns: repeat(4,1fr);
@@ -684,10 +672,6 @@
             padding: 14px 0;
             border-top: 2px solid var(--accent);
         }
-
-            .brand-desc .project-type {
-                margin-bottom: 4px;
-            }
 
         .brand-name {
             font-family: 'DM Serif Display', serif;
@@ -727,9 +711,6 @@
             .mkt-card img {
                 width: 100%;
                 display: block;
-            }
-
-            .mkt-card .sq img {
                 aspect-ratio: 1/1;
                 object-fit: cover;
             }
@@ -737,10 +718,6 @@
         .mkt-info {
             padding: 14px 18px;
         }
-
-            .mkt-info .project-type {
-                margin-bottom: 4px;
-            }
 
         .mkt-title {
             font-family: 'DM Serif Display', serif;
@@ -760,8 +737,8 @@
         }
 
         .brochure-visual {
-            width: 180px;
-            height: 240px;
+            width: 160px;
+            height: 220px;
             background: #1a6b5c;
             border-radius: 4px;
             display: flex;
@@ -772,33 +749,25 @@
             flex-shrink: 0;
         }
 
-        .brochure-visual-label {
-            font-size: 0.65rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.5);
-            margin-bottom: 10px;
-        }
-
-        .brochure-visual-text {
-            font-size: 2.5rem;
-            font-weight: 900;
-            line-height: 0.85;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.12);
-            font-family: 'DM Sans', sans-serif;
-            text-align: center;
-        }
+            .brochure-visual span {
+                font-size: 2.2rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: rgba(255,255,255,0.12);
+                font-family: 'DM Sans', sans-serif;
+                text-align: center;
+                line-height: 0.9;
+            }
 
         .brochure-badge {
-            margin-top: 16px;
-            padding: 8px 16px;
+            margin-top: 14px;
+            padding: 7px 14px;
             border: 1px solid rgba(255,255,255,0.25);
             border-radius: 2px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.55);
         }
 
         /* LIGHTBOX */
@@ -987,7 +956,6 @@
                 color: var(--accent);
             }
 
-        /* REVEAL */
         .reveal {
             opacity: 0;
             transform: translateY(24px);
@@ -999,7 +967,6 @@
                 transform: translateY(0);
             }
 
-        /* RESPONSIVE */
         @media(max-width:1100px) {
             .logos-grid {
                 grid-template-columns: repeat(3,1fr)
@@ -1009,7 +976,7 @@
                 grid-template-columns: repeat(2,1fr)
             }
 
-            .grid-3 {
+            .g3 {
                 grid-template-columns: repeat(2,1fr)
             }
         }
@@ -1024,7 +991,7 @@
                 padding: 120px 28px 60px
             }
 
-            .hero-right {
+            .hero-stat-grid {
                 display: none
             }
 
@@ -1045,7 +1012,7 @@
                 grid-template-columns: 1fr
             }
 
-            .grid-4 {
+            .g4 {
                 grid-template-columns: repeat(2,1fr)
             }
 
@@ -1059,12 +1026,12 @@
 
             .brochure-visual {
                 width: 100%;
-                height: 120px
+                height: 100px
             }
         }
 
         @media(max-width:600px) {
-            .skills-grid, .grid-3, .mkt-grid {
+            .skills-grid, .g3, .mkt-grid {
                 grid-template-columns: 1fr
             }
 
@@ -1072,16 +1039,12 @@
                 display: none
             }
 
-            .logos-grid {
+            .logos-grid, .brand-desc-grid {
                 grid-template-columns: repeat(2,1fr)
             }
 
-            .grid-4 {
+            .g4 {
                 grid-template-columns: repeat(2,1fr)
-            }
-
-            .brand-desc-grid {
-                grid-template-columns: 1fr 1fr
             }
         }
     </style>
@@ -1109,13 +1072,11 @@
                 <a href="#contact" class="btn-secondary">Get in Touch</a>
             </div>
         </div>
-        <div class="hero-right">
-            <div class="hero-stat-grid">
-                <div class="stat-card"><div class="stat-number">1.5+</div><div class="stat-label">Years Experience</div></div>
-                <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Websites Designed</div></div>
-                <div class="stat-card"><div class="stat-number">20+</div><div class="stat-label">CRM Modules</div></div>
-                <div class="stat-card"><div class="stat-number">8+</div><div class="stat-label">Brand Identities</div></div>
-            </div>
+        <div class="hero-stat-grid">
+            <div class="stat-card"><div class="stat-number">1.5+</div><div class="stat-label">Years Experience</div></div>
+            <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Websites Designed</div></div>
+            <div class="stat-card"><div class="stat-number">20+</div><div class="stat-label">CRM Modules</div></div>
+            <div class="stat-card"><div class="stat-number">8+</div><div class="stat-label">Brand Identities</div></div>
         </div>
     </section>
 
@@ -1128,9 +1089,9 @@
                     <h2 class="section-title">Design with purpose,<br>built for people.</h2>
                     <div class="divider"></div>
                 </div>
-                <p>I'm a <strong>UI/UX Designer with 1.5+ years</strong> of hands-on experience designing user-centered digital products — from complex enterprise CRM applications to brand identities and high-impact marketing materials.</p>
+                <p>I'm a <strong>UI/UX Designer with 1.5+ years</strong> of hands-on experience designing user-centered digital products — from complex enterprise CRM applications to brand identities and marketing materials.</p>
                 <p>Proficient in <strong>Figma and Adobe Creative Suite</strong>, I command the full design process: wireframing, prototyping, pixel-perfect UI delivery, and brand design from concept to final asset.</p>
-                <p>When I'm not designing, I'm exploring UI trends, digital illustration, photography, or sketching new ideas.</p>
+                <p>When I'm not designing, I explore UI trends, digital illustration, photography, or sketch new ideas.</p>
                 <div class="about-info">
                     <div class="about-info-row"><span class="info-label">Location</span><span class="info-val">Bangalore, HSR Layout</span></div>
                     <div class="about-info-row"><span class="info-label">Email</span><span class="info-val"><a href="mailto:rathesh102@gmail.com">rathesh102@gmail.com</a></span></div>
@@ -1148,7 +1109,7 @@
                         <ul class="exp-points">
                             <li>Led end-to-end design of Netjet Go — enterprise CRM with 20+ modules.</li>
                             <li>Designed 10+ corporate websites across diverse industries.</li>
-                            <li>Created brand identities — Netjet, NimBook, Ashirvad, Frost Fairy & more.</li>
+                            <li>Created brand identities for Netjet, NimBook, Ashirvad, Frost Fairy & more.</li>
                             <li>Built scalable Figma design systems with reusable components.</li>
                             <li>Produced social media creatives, event posters, and campaign banners.</li>
                         </ul>
@@ -1198,201 +1159,150 @@
             <button class="filter-btn" onclick="filter('mkt',this)">Marketing & Social</button>
         </div>
 
-        <!-- ═══ CRM ═══ -->
+        <!-- CRM -->
         <div class="project-group active" id="group-crm">
             <div class="crm-hero">
                 <div class="info-card reveal">
-                    <div class="project-type">Enterprise CRM · Netjet Infotech Pvt. Ltd.</div>
-                    <h3 class="project-title-lg">Netjet Go — CRM Web Application</h3>
-                    <p class="project-desc">Designed the complete web interface for Netjet Go — managing customer data, leads, sales pipelines, and business workflows. Delivered 20+ modules: dashboards, lead tracking, activities, pipeline management, HRM, and reporting.</p>
-                    <div class="project-tags"><span class="tag">Figma</span><span class="tag">Wireframing</span><span class="tag">Design System</span><span class="tag">Prototyping</span><span class="tag">Dev Handoff</span></div>
+                    <div class="proj-type">Enterprise CRM · Netjet Infotech Pvt. Ltd.</div>
+                    <h3 class="proj-title-lg">Netjet Go — CRM Web Application</h3>
+                    <p class="proj-desc">Complete web interface for Netjet Go — managing customer data, leads, sales pipelines, and business workflows. Delivered 20+ modules including dashboards, lead tracking, activities feed, pipeline management, HRM, and reporting views.</p>
+                    <div class="proj-tags"><span class="tag">Figma</span><span class="tag">Wireframing</span><span class="tag">Design System</span><span class="tag">Prototyping</span><span class="tag">Dev Handoff</span></div>
                 </div>
-                <div class="grid-2x2 reveal">
-                    <div class="thumb r169" onclick="lb('images/Dashboard.png')"><img src="images/Dashboard.png" alt="Dashboard" loading="lazy" /></div>
-                    <div class="thumb r169" onclick="lb('images/Activities.png')"><img src="images/Activities.png" alt="Activities" loading="lazy" /></div>
-                    <div class="thumb r169" onclick="lb('images/CRM_3.png')"><img src="images/CRM_3.png" alt="Leads" loading="lazy" /></div>
-                    <div class="thumb r169" onclick="lb('images/OPPORTUNITIES.png')"><img src="images/OPPORTUNITIES.png" alt="Opportunities" loading="lazy" /></div>
+                <div class="g2x2 reveal">
+                    <div class="thumb r169" onclick="lb('images/mobile-dashboard.png')"><img src="images/mobile-dashboard.png" alt="Dashboard" loading="lazy" /></div>
+                    <div class="thumb r169" onclick="lb('images/crm-activities.png')"><img src="images/crm-activities.png" alt="Activities" loading="lazy" /></div>
+                    <div class="thumb r169" onclick="lb('images/crm-leads.png')"><img src="images/crm-leads.png" alt="Leads" loading="lazy" /></div>
+                    <div class="thumb r169" onclick="lb('images/crm-opportunities.png')"><img src="images/crm-opportunities.png" alt="Opportunities" loading="lazy" /></div>
                 </div>
             </div>
-            <div class="grid-4 reveal">
-                <div class="thumb r43" onclick="lb('images/CRM_9.png')"><img src="images/CRM_9.png" alt="Tasks" loading="lazy" /></div>
-                <div class="thumb r43" onclick="lb('images/CRM_11.png')"><img src="images/CRM_11.png" alt="Pipeline" loading="lazy" /></div>
-                <div class="thumb r43" onclick="lb('images/Admin_Dashboard_Page.png')"><img src="images/Admin_Dashboard_Page.png" alt="Admin Dashboard" loading="lazy" /></div>
-                <div class="thumb r43" onclick="lb('images/Sales_Report.png')"><img src="images/Sales_Report.png" alt="Sales Report" loading="lazy" /></div>
+            <div class="g4 reveal">
+                <div class="thumb r43" onclick="lb('images/crm-tasks.png')"><img src="images/crm-tasks.png" alt="Tasks" loading="lazy" /></div>
+                <div class="thumb r43" onclick="lb('images/crm-pipeline.png')"><img src="images/crm-pipeline.png" alt="Pipeline" loading="lazy" /></div>
+                <div class="thumb r43" onclick="lb('images/crm-admin-dashboard.png')"><img src="images/crm-admin-dashboard.png" alt="Admin Dashboard" loading="lazy" /></div>
+                <div class="thumb r43" onclick="lb('images/crm-sales-report.png')"><img src="images/crm-sales-report.png" alt="Sales Report" loading="lazy" /></div>
             </div>
-            <div class="grid-4 reveal" style="margin-top:14px;">
-                <div class="thumb r43" onclick="lb('images/View_Members.png')"><img src="images/View_Members.png" alt="Members" loading="lazy" /></div>
-                <div class="thumb r43" onclick="lb('images/Calender.png')"><img src="images/Calender.png" alt="Calendar" loading="lazy" /></div>
-                <div class="thumb r43" onclick="lb('images/Sign_Up.jpg')"><img src="images/Sign_Up.jpg" alt="Sign Up" loading="lazy" /></div>
+            <div class="g4 reveal" style="margin-top:14px;">
+                <div class="thumb r43" onclick="lb('images/crm-members.png')"><img src="images/crm-members.png" alt="Members" loading="lazy" /></div>
+                <div class="thumb r43" onclick="lb('images/mobile-calendar.png')"><img src="images/mobile-calendar.png" alt="Calendar" loading="lazy" /></div>
+                <div class="thumb r43" onclick="lb('images/crm-signup.jpg')"><img src="images/crm-signup.jpg" alt="Sign Up" loading="lazy" /></div>
                 <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:20px;display:flex;flex-direction:column;justify-content:center;">
-                    <div class="project-type" style="margin-bottom:6px;">Also included</div>
-                    <p style="font-size:0.8rem;color:var(--ink-muted);line-height:1.55;">HRM modules, contacts, invoices, payroll, authentication flows, and more — all part of the complete Netjet Go design system.</p>
+                    <div class="proj-type" style="margin-bottom:6px;">Also included</div>
+                    <p style="font-size:0.8rem;color:var(--ink-muted);line-height:1.55;">HRM modules, contacts, invoices, payroll, authentication flows — all part of the complete Netjet Go design system.</p>
                 </div>
             </div>
             <p style="margin-top:10px;font-size:0.75rem;color:var(--ink-muted);letter-spacing:0.05em;">↑ Click any screen to view full size</p>
         </div>
 
-        <!-- ═══ WEBSITES ═══ -->
+        <!-- WEBSITES -->
         <div class="project-group" id="group-web">
-            <div class="grid-3">
+            <div class="g3">
                 <div class="web-card reveal">
-                    <div class="web-thumb"><img src="images/Homepage_-_Nim_Academy.png" alt="Nim Academy" loading="lazy" /></div>
+                    <div class="web-thumb"><img src="images/web-nim-academy.png" alt="Nim Academy" loading="lazy" /></div>
                     <div class="card-body">
-                        <div class="project-type">Ed-Tech · Corporate Website</div>
-                        <div class="project-title-md">NIM Academy</div>
-                        <p class="project-desc">Full website for an IT training academy — hero, courses, programs, gallery and CTA sections with bold teal/green brand identity.</p>
-                        <div class="project-tags"><span class="tag">Figma</span><span class="tag">Responsive</span><span class="tag">Brand Identity</span></div>
+                        <div class="proj-type">Ed-Tech · Corporate Website</div>
+                        <div class="proj-title-md">NIM Academy</div>
+                        <p class="proj-desc">Full website for an IT training academy — hero, courses, programs, gallery and CTA sections with a bold teal/green brand identity.</p>
+                        <div class="proj-tags"><span class="tag">Figma</span><span class="tag">Responsive</span><span class="tag">Brand Identity</span></div>
                     </div>
                 </div>
                 <div class="web-card reveal">
-                    <div class="web-thumb"><img src="images/NextGen_AI_-_Nim_Academy.png" alt="Nim Tech" loading="lazy" /></div>
+                    <div class="web-thumb"><img src="images/web-nim-tech.png" alt="Nim Technologies" loading="lazy" /></div>
                     <div class="card-body">
-                        <div class="project-type">Tech · Corporate Website</div>
-                        <div class="project-title-md">Nim Technologies</div>
-                        <p class="project-desc">Career platform with courses, hiring sections, drop-your-resume forms, and teal layout aligned to chess knight brand identity.</p>
-                        <div class="project-tags"><span class="tag">Figma</span><span class="tag">Visual Hierarchy</span><span class="tag">UX Design</span></div>
+                        <div class="proj-type">Tech · Corporate Website</div>
+                        <div class="proj-title-md">Nim Technologies</div>
+                        <p class="proj-desc">Career platform with courses, hiring sections, drop-your-resume forms, and a teal layout aligned to chess knight brand identity.</p>
+                        <div class="proj-tags"><span class="tag">Figma</span><span class="tag">Visual Hierarchy</span><span class="tag">UX Design</span></div>
                     </div>
                 </div>
                 <div class="web-card reveal">
-                    <div class="web-thumb"><img src="images/RichCool_HomePage.png" alt="RichCool" loading="lazy" /></div>
+                    <div class="web-thumb"><img src="images/web-ricchool-home.png" alt="RichCool" loading="lazy" /></div>
                     <div class="card-body">
-                        <div class="project-type">Finance · Corporate Website</div>
-                        <div class="project-title-md">RichCool — Finance Platform</div>
-                        <p class="project-desc">Homepage with loan calculator, eligibility criteria, and service cards for personal, business, and salary advance loans.</p>
-                        <div class="project-tags"><span class="tag">Figma</span><span class="tag">Web Design</span><span class="tag">UI Design</span></div>
+                        <div class="proj-type">Finance · Corporate Website</div>
+                        <div class="proj-title-md">RichCool — Finance Platform</div>
+                        <p class="proj-desc">Homepage with a loan calculator, eligibility criteria, and service cards for personal, business, and salary advance loans.</p>
+                        <div class="proj-tags"><span class="tag">Figma</span><span class="tag">Web Design</span><span class="tag">UI Design</span></div>
                     </div>
                 </div>
                 <div class="web-card reveal">
-                    <div class="web-thumb"><img src="images/RichCool_Apply_now.png" alt="RichCool Apply" loading="lazy" /></div>
+                    <div class="web-thumb"><img src="images/web-ricchool-apply.png" alt="RichCool Apply" loading="lazy" /></div>
                     <div class="card-body">
-                        <div class="project-type">Finance · Inner Page</div>
-                        <div class="project-title-md">RichCool — Sign Up Page</div>
-                        <p class="project-desc">Account creation page with split layout, photo usage, and loan type service cards.</p>
-                        <div class="project-tags"><span class="tag">Figma</span><span class="tag">Form UX</span><span class="tag">Responsive</span></div>
+                        <div class="proj-type">Finance · Inner Page</div>
+                        <div class="proj-title-md">RichCool — Sign Up Page</div>
+                        <p class="proj-desc">Account creation page with a split layout, photo usage, and loan type service cards.</p>
+                        <div class="proj-tags"><span class="tag">Figma</span><span class="tag">Form UX</span><span class="tag">Responsive</span></div>
                     </div>
                 </div>
                 <div class="web-card reveal">
-                    <div class="web-thumb"><img src="images/Page_-_1.png" alt="Auto Parts V1" loading="lazy" /></div>
+                    <div class="web-thumb"><img src="images/web-autoparts-v1.png" alt="Auto Parts V1" loading="lazy" /></div>
                     <div class="card-body">
-                        <div class="project-type">E-Commerce · Automotive</div>
-                        <div class="project-title-md">Auto Parts Store — V1</div>
-                        <p class="project-desc">E-commerce website for a Dubai auto parts retailer with shop listing, top categories, best sellers, and brand logos.</p>
-                        <div class="project-tags"><span class="tag">Figma</span><span class="tag">E-Commerce UI</span><span class="tag">Responsive</span></div>
+                        <div class="proj-type">E-Commerce · Automotive</div>
+                        <div class="proj-title-md">Auto Parts Store — V1</div>
+                        <p class="proj-desc">E-commerce website for a Dubai auto parts retailer with shop listing, top categories, best sellers, and brand logos.</p>
+                        <div class="proj-tags"><span class="tag">Figma</span><span class="tag">E-Commerce UI</span><span class="tag">Responsive</span></div>
                     </div>
                 </div>
                 <div class="web-card reveal">
-                    <div class="web-thumb"><img src="images/Page_-_3.png" alt="Parts V2" loading="lazy" /></div>
+                    <div class="web-thumb"><img src="images/web-autoparts-v2.png" alt="Parts V2" loading="lazy" /></div>
                     <div class="card-body">
-                        <div class="project-type">E-Commerce · Automotive</div>
-                        <div class="project-title-md">Parts Store — V2 Redesign</div>
-                        <p class="project-desc">Enhanced hero with brand logos, WhatsApp CTA, and a "How It Works" process section with stronger visual hierarchy.</p>
-                        <div class="project-tags"><span class="tag">Figma</span><span class="tag">UX Redesign</span><span class="tag">Brand Design</span></div>
+                        <div class="proj-type">E-Commerce · Automotive</div>
+                        <div class="proj-title-md">Parts Store — V2 Redesign</div>
+                        <p class="proj-desc">Enhanced hero with brand logos, WhatsApp CTA, and a "How It Works" section with stronger visual hierarchy.</p>
+                        <div class="proj-tags"><span class="tag">Figma</span><span class="tag">UX Redesign</span><span class="tag">Brand Design</span></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ═══ BRANDING ═══ -->
+        <!-- BRANDING -->
         <div class="project-group" id="group-brand">
             <div class="logos-grid">
-                <div class="logo-card reveal" onclick="lb('images/WhatsApp_Image_2026-03-03_at_1_13_59_PM.jpeg')">
-                    <img src="images/WhatsApp_Image_2026-03-03_at_1_13_59_PM.jpeg" alt="NimBook" />
-                </div>
-                <div class="logo-card reveal" onclick="lb('images/WhatsApp_Image_2026-03-03_at_10_30_50_AM.jpeg')">
-                    <img src="images/WhatsApp_Image_2026-03-03_at_10_30_50_AM.jpeg" alt="Garage J57" />
-                </div>
-                <div class="logo-card reveal" onclick="lb('images/Instagram_post_-_1.jpg')">
-                    <img src="images/Instagram_post_-_1.jpg" alt="Netjet Logo" />
-                </div>
-                <div class="logo-card bg-dark reveal" onclick="lb('images/Group_1000006160.png')">
-                    <img src="images/Group_1000006160.png" alt="Netjet Dark" />
-                </div>
-                <div class="logo-card bg-dark reveal" onclick="lb('images/Group_59492.jpg')">
-                    <img src="images/Group_59492.jpg" alt="NetjetGo Icon" />
-                </div>
-                <div class="logo-card reveal" onclick="lb('images/Frame_21186.png')">
-                    <img src="images/Frame_21186.png" alt="NetjetGo Horizontal" />
-                </div>
-                <div class="logo-card reveal" onclick="lb('images/Side_Image.png')">
-                    <img src="images/Side_Image.png" alt="Ashirvad Catering" />
-                </div>
-                <div class="logo-card reveal" onclick="lb('images/Slide_16_9_-_16.png')">
-                    <img src="images/Slide_16_9_-_16.png" alt="Frost Fairy" />
-                </div>
+                <div class="logo-card reveal" onclick="lb('images/logo-nimbook.jpeg')"><img src="images/logo-nimbook.jpeg" alt="NimBook" /></div>
+                <div class="logo-card reveal" onclick="lb('images/logo-garagej57.jpeg')"><img src="images/logo-garagej57.jpeg" alt="Garage J57" /></div>
+                <div class="logo-card reveal" onclick="lb('images/logo-netjet-white.jpg')"><img src="images/logo-netjet-white.jpg" alt="Netjet Logo" /></div>
+                <div class="logo-card bg-dark reveal" onclick="lb('images/logo-netjet-dark.png')"><img src="images/logo-netjet-dark.png" alt="Netjet Dark" /></div>
+                <div class="logo-card bg-dark reveal" onclick="lb('images/logo-netjetgo-icon.jpg')"><img src="images/logo-netjetgo-icon.jpg" alt="NetjetGo Icon" /></div>
+                <div class="logo-card reveal" onclick="lb('images/logo-netjetgo-horizontal.png')"><img src="images/logo-netjetgo-horizontal.png" alt="NetjetGo" /></div>
+                <div class="logo-card reveal" onclick="lb('images/logo-ashirvad.png')"><img src="images/logo-ashirvad.png" alt="Ashirvad Catering" /></div>
+                <div class="logo-card reveal" onclick="lb('images/logo-frostfairy.png')"><img src="images/logo-frostfairy.png" alt="Frost Fairy" /></div>
             </div>
             <div class="brand-desc-grid">
-                <div class="brand-desc reveal">
-                    <div class="project-type">App · Branding</div>
-                    <div class="brand-name">NimBook</div>
-                    <div class="brand-note">Clean teal arch mark + bold wordmark for an ed-tech app — minimal and modern with a unique letterform mark.</div>
-                </div>
-                <div class="brand-desc reveal">
-                    <div class="project-type">Automotive · Brand</div>
-                    <div class="brand-name">Garage J57</div>
-                    <div class="brand-note">Bold red gear + engine illustration mark for an auto parts brand — rugged and industrial in character.</div>
-                </div>
-                <div class="brand-desc reveal">
-                    <div class="project-type">IT Company · Brand System</div>
-                    <div class="brand-name">Netjet</div>
-                    <div class="brand-note">Multiple logo variants — light, dark, icon-only — for a full IT services company brand system.</div>
-                </div>
-                <div class="brand-desc reveal">
-                    <div class="project-type">CRM Product · Brand</div>
-                    <div class="brand-name">NetjetGo</div>
-                    <div class="brand-note">Dynamic rocket/arrow mark for the CRM product — speed and ambition through layered geometric forms.</div>
-                </div>
+                <div class="brand-desc reveal"><div class="proj-type">App · Branding</div><div class="brand-name">NimBook</div><div class="brand-note">Teal arch mark + bold wordmark for an ed-tech app — minimal and modern.</div></div>
+                <div class="brand-desc reveal"><div class="proj-type">Automotive · Brand</div><div class="brand-name">Garage J57</div><div class="brand-note">Bold red gear + engine illustration — rugged and industrial in character.</div></div>
+                <div class="brand-desc reveal"><div class="proj-type">IT Company · Brand System</div><div class="brand-name">Netjet</div><div class="brand-note">Multiple variants — light, dark, icon-only — for a full IT services brand system.</div></div>
+                <div class="brand-desc reveal"><div class="proj-type">CRM Product · Brand</div><div class="brand-name">NetjetGo</div><div class="brand-note">Dynamic rocket/arrow mark — speed and ambition through layered geometric forms.</div></div>
             </div>
             <div class="brand-desc-grid" style="margin-top:20px;">
-                <div class="brand-desc reveal" style="grid-column:span 2;">
-                    <div class="project-type">Food & Catering · Brand</div>
-                    <div class="brand-name">Ashirvad Catering Service W.L.L</div>
-                    <div class="brand-note">Classic crest-style logo with wheat motif and chef illustration — warm earthy tones conveying trust and tradition in hospitality.</div>
-                </div>
-                <div class="brand-desc reveal" style="grid-column:span 2;">
-                    <div class="project-type">Bakery · Brand</div>
-                    <div class="brand-name">Frost Fairy Cake Factory</div>
-                    <div class="brand-note">Illustrated mascot logo with a custom hand-drawn baker character — vibrant orange and red palette, highly memorable for a bakery brand.</div>
-                </div>
+                <div class="brand-desc reveal" style="grid-column:span 2;"><div class="proj-type">Food & Catering · Brand</div><div class="brand-name">Ashirvad Catering Service W.L.L</div><div class="brand-note">Classic crest-style logo with wheat motif and chef illustration — warm earthy tones for a hospitality brand.</div></div>
+                <div class="brand-desc reveal" style="grid-column:span 2;"><div class="proj-type">Bakery · Brand</div><div class="brand-name">Frost Fairy Cake Factory</div><div class="brand-note">Illustrated mascot logo with a custom hand-drawn baker character — vibrant and memorable.</div></div>
             </div>
         </div>
 
-        <!-- ═══ MARKETING ═══ -->
+        <!-- MARKETING -->
         <div class="project-group" id="group-mkt">
             <div class="mkt-grid">
-                <div class="mkt-card reveal" onclick="lb('images/linkedin_post_-1.jpg')">
-                    <img src="images/linkedin_post_-1.jpg" alt="Netjet LinkedIn" />
-                    <div class="mkt-info">
-                        <div class="project-type">LinkedIn Creative · Netjet Infotech</div>
-                        <div class="mkt-title">"Your Goal! Our Code!" — Social Post</div>
-                    </div>
+                <div class="mkt-card reveal" onclick="lb('images/mkt-linkedin-netjet.jpg')">
+                    <img src="images/mkt-linkedin-netjet.jpg" alt="Netjet LinkedIn Post" />
+                    <div class="mkt-info"><div class="proj-type">LinkedIn Creative · Netjet Infotech</div><div class="mkt-title">"Your Goal! Our Code!" — Social Post</div></div>
                 </div>
-                <div class="mkt-card reveal" onclick="lb('images/Group_59492.jpg')" style="background:#3b3ca6;">
-                    <img src="images/Group_59492.jpg" alt="NetjetGo Dark" style="padding:32px;object-fit:contain;aspect-ratio:1/1;background:#3b3ca6;" />
-                    <div class="mkt-info" style="background:#3b3ca6;">
-                        <div class="project-type" style="color:#C8A090;">Brand Asset · Dark Theme</div>
-                        <div class="mkt-title" style="color:#fff;">NetjetGo — Icon Dark Variant</div>
-                    </div>
+                <div class="mkt-card reveal" onclick="lb('images/logo-netjetgo-icon.jpg')" style="background:#3b3ca6;">
+                    <img src="images/logo-netjetgo-icon.jpg" alt="NetjetGo Dark" style="padding:32px;object-fit:contain;aspect-ratio:1/1;background:#3b3ca6;" />
+                    <div class="mkt-info" style="background:#3b3ca6;"><div class="proj-type" style="color:#C8A090;">Brand Asset · Dark Theme</div><div class="mkt-title" style="color:#fff;">NetjetGo — Icon Dark Variant</div></div>
                 </div>
-                <div class="mkt-card reveal" onclick="lb('images/Slide_16_9_-_16.png')">
-                    <img src="images/Slide_16_9_-_16.png" alt="Frost Fairy" style="object-fit:contain;background:#fff8f0;aspect-ratio:1/1;padding:16px;" />
-                    <div class="mkt-info">
-                        <div class="project-type">Mascot Illustration · Bakery</div>
-                        <div class="mkt-title">Frost Fairy — Character Brand Mark</div>
-                    </div>
+                <div class="mkt-card reveal" onclick="lb('images/logo-frostfairy.png')">
+                    <img src="images/logo-frostfairy.png" alt="Frost Fairy" style="object-fit:contain;background:#fff8f0;aspect-ratio:1/1;padding:16px;" />
+                    <div class="mkt-info"><div class="proj-type">Mascot Illustration · Bakery</div><div class="mkt-title">Frost Fairy — Character Brand Mark</div></div>
                 </div>
             </div>
-
-            <!-- NIM Brochure -->
             <div class="brochure-block reveal">
                 <div>
-                    <div class="project-type">Print & Digital · NIM Academy</div>
-                    <h3 class="project-title-lg" style="font-size:1.55rem;margin-bottom:14px;">NextGen AI Workshop — Brochure Design</h3>
-                    <p class="project-desc" style="font-size:0.9rem;">Designed a full A4 promotional brochure for NIM Academy's flagship AI Workshop — a 2-day free program for South India tech colleges. Features phase breakdowns, program structure, bold teal typographic layout with vertical title treatment and geometric hex-pattern background.</p>
-                    <div class="project-tags"><span class="tag">Print Design</span><span class="tag">A4 Brochure</span><span class="tag">Adobe Illustrator</span><span class="tag">Typography</span></div>
+                    <div class="proj-type">Print & Digital · NIM Academy</div>
+                    <h3 class="proj-title-lg" style="font-size:1.55rem;margin-bottom:14px;">NextGen AI Workshop — Brochure Design</h3>
+                    <p class="proj-desc">Designed a full A4 promotional brochure for NIM Academy's flagship AI Workshop — a free 2-day program for South India tech colleges. Bold teal typographic layout with vertical title treatment and geometric hex-pattern background.</p>
+                    <div class="proj-tags"><span class="tag">Print Design</span><span class="tag">A4 Brochure</span><span class="tag">Adobe Illustrator</span><span class="tag">Typography</span></div>
                 </div>
                 <div class="brochure-visual">
-                    <div class="brochure-visual-label">A4 Print · Portrait</div>
-                    <div class="brochure-visual-text">NEXT<br>GEN<br>AI</div>
+                    <div style="font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:10px;">A4 · Portrait</div>
+                    <span>NEXT<br>GEN<br>AI</span>
                     <div class="brochure-badge">Free · 2 Days · Certificate</div>
                 </div>
             </div>
@@ -1426,9 +1336,8 @@
         </div>
     </section>
 
-    <footer><p>© 2025 <span>Rathesh Kumar S</span> · UI/UX Designer · Bangalore, India</p></footer>
+    <footer><p>© 2025 <span>Rathesh Kumar S</span> · UI/UX And Graphic Designer · Bangalore, India</p></footer>
 
-    <!-- LIGHTBOX -->
     <div class="lightbox" id="lb" onclick="closeLb()">
         <button class="lb-close" onclick="event.stopPropagation();closeLb()">✕</button>
         <img id="lb-img" src="" alt="" />
@@ -1438,7 +1347,7 @@
     <script>
         const obs = new IntersectionObserver((entries) => {
             entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 55); obs.unobserve(e.target); } });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.08 });
         document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
         const hl = document.querySelector('.hero-left');
